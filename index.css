@@ -1,0 +1,59 @@
+:root {
+	--button-color: #f1c40f;
+}
+
+body {
+	background: #cfd8dc;
+	width: 98vw;
+	height: 98vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	text-align: center;
+	font-family: 'Turret Road', cursive;
+	font-size: 30px;
+}
+
+button {
+	font-family: 'Turret Road', cursive;
+	position: relative;
+	background-color: #f39c12;
+	width: 200px;
+	padding: 20px;
+	border: none;
+	outline-style: none;
+	border-radius: 15px;
+	font-size: 30px;
+	font-weight: 900;
+	transition-duration: 0.4s;
+	overflow: hidden;
+}
+
+button:hover {
+	background: #fff;
+	box-shadow: 2px 5px 20px 5px #97b1bf;
+	color: #000;
+}
+
+button:after {
+	content: "";
+	background: var(--button-color);
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+button:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
+}
